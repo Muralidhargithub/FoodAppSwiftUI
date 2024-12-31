@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject private var viewModel: FoodViewModel
+    @Bindable var viewModel: FoodViewModel
     var body: some View {
         NavigationView {
             List (viewModel.foodGroups, id: \..id) {
@@ -33,6 +33,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
-        .environmentObject(FoodViewModel(networkManager: NetworkManagerImp.shared))
+    ContentView(viewModel: FoodViewModel(networkManager: NetworkManagerImp.shared))
 }

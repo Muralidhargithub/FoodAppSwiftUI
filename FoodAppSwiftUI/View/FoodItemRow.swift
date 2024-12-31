@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FoodItemRow: View {
     var foodItems: FoodItem
-    @ObservedObject var viewModel: FoodViewModel
+    var viewModel: FoodViewModel
     
     @State private var image: UIImage? = nil
     

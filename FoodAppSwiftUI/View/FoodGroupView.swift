@@ -38,9 +38,9 @@ import SwiftUI
 //}
 struct FoodGroupView: View {
     let foodGroup: FoodGroup
-    @ObservedObject var viewModel: FoodViewModel
+     var viewModel: FoodViewModel
     @State private var image: UIImage? = nil
-    @Environment(\.colorScheme) var colorScheme // Accessing system value
+    @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
         HStack(alignment: .top, spacing: 16) {
@@ -58,10 +58,10 @@ struct FoodGroupView: View {
             VStack(alignment: .leading, spacing: 8) {
                 Text(foodGroup.name ?? "Unknown Name")
                     .font(.headline)
-                    .foregroundColor(colorScheme == .dark ? .blue : .black) // Adjust text color
+                    .foregroundColor(colorScheme == .dark ? .blue : .black)
                 Text(foodGroup.description ?? "No Description")
                     .font(.subheadline)
-                    .foregroundColor(colorScheme == .dark ? .gray : .secondary) // Adjust text color
+                    .foregroundColor(colorScheme == .dark ? .gray : .secondary) 
             }
         }
         .padding(.vertical, 8)

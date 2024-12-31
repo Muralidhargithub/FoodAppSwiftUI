@@ -11,8 +11,7 @@ import SwiftUI
 struct FoodAppSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(FoodViewModel(networkManager: NetworkManagerImp.shared))
+            ContentView(viewModel: FoodViewModel(networkManager: NetworkManagerImp.shared))
         }
     }
 }

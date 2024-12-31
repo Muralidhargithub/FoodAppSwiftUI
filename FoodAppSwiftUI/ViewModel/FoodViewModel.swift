@@ -7,10 +7,11 @@
 
 import Foundation
 import UIKit
+import Observation
 
-class FoodViewModel: ObservableObject {
-    @Published  var foodGroups: [FoodGroup] = []
-    @Published  var isLoading: Bool = false
+@Observable class FoodViewModel {
+    var foodGroups: [FoodGroup] = []
+    var isLoading: Bool = false
     
     private var networkManager: NetworkManager
     

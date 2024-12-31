@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FoodDetail: View {
     var foodGroups: FoodGroup
-    @ObservedObject var viewModel: FoodViewModel
+     var viewModel: FoodViewModel
     
     var body: some View {
         List(foodGroups.food_items, id: \..id) { foodItem in
